@@ -1,0 +1,45 @@
+
+//Write a Java program to sort a numeric array and a string array.
+
+
+
+import java.util.Arrays;
+
+public class ManualSort {
+    public static void main(String[] args) {
+
+        // Integer array
+        int[] arr1 = {1789, 2035, 1899, 1456, 2013,
+                         1458, 2458, 1254, 1472, 2365,
+                         1456, 2165, 1457, 2456};
+
+        // Bubble sort for integer array
+        for(int i = 0; i < arr1.length- 1; i++){
+            for(int j = 0; j <arr1.length - 1 - i; j++){
+                if(arr1[j] > arr1[j+1]){
+                    int temp = arr1[j];
+                    arr1[j] = arr1[j+1];
+                    arr1[j+1] = temp;
+                }
+            }
+        }
+
+        // Print sorted array
+        System.out.println(Arrays.toString(arr1));
+
+        // String array (you can implement manual sort similarly)
+        String[] arr2 = {"Java", "Python", "PHP", "C#", "C Programming", "C++"};
+        
+        
+        for(int i=0;i<arr2.length-1;i++){
+            for(int j=0;j<arr2.length-1-i;j++){
+                if(arr2[j].compareTo(arr2[j+1]) > 0){  //in java it compares internlly by its respective ASCII so +ve means swapping needed if -ve means no swapping needed //we can't compare the strings by using operands because it is a object not primitive datatype
+                    String temp=arr2[j];
+                    arr2[j]=arr2[j+1];
+                    arr2[j+1]=temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr2));
+    }
+}
