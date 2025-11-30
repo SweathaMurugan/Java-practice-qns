@@ -1,0 +1,29 @@
+Write a Java program to sum values of an array
+
+//using forloop
+public class demo{
+    public static void main(String[]args){
+
+     int[]arr={1,2,3,4,5};
+     int sum=0;
+     for(int i=0;i<arr.length;i++){
+         sum+=arr[i];
+     }
+   System.out.println("Sum:"+sum);
+   }
+}
+//using while loop
+
+public class demo{
+    public static void main(String[]args){
+
+     int[]arr={1,2,3,4,5};
+     int sum=0;
+     int i=0;
+     while(i<arr.length){
+         sum+=arr[i];
+         i++;
+     }
+   System.out.println("Sum:"+sum);
+   }
+}
