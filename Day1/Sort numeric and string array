@@ -27,6 +27,10 @@ public class ManualSort {
         // Print sorted array
         System.out.println(Arrays.toString(arr1));
 
+OUTPUT:
+Sorted numeric array : [1254, 1456, 1456, 1457, 1458, 1472, 1789, 1899, 2013, 2035, 2165, 2365, 2456, 2458]
+
+
         // String array (you can implement manual sort similarly)
         String[] arr2 = {"Java", "Python", "PHP", "C#", "C Programming", "C++"};
         
@@ -43,3 +47,6 @@ public class ManualSort {
         System.out.println(Arrays.toString(arr2));
     }
 }
+
+OUTPUT:
+Sorted string array : [C Programming, C#, C++, Java, PHP, Python]
