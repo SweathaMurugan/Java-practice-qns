@@ -27,3 +27,7 @@ public class demo{
    System.out.println("Sum:"+sum);
    }
 }
+
+
+OUTPUT:
+Sum:15
