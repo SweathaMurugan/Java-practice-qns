@@ -1,0 +1,55 @@
+
+class Book{
+    private String authorName;
+    private String title;
+    private int price;
+    
+    public void setauthorName(String authorName){
+        this.authorName=authorName;
+        
+    }
+    public String getauthorName(){
+        return authorName;
+    }
+    public void settitle(String title){
+        this.title=title;
+    }
+    public String gettitle(){
+        return title;
+    }
+    public void setprice(int price){
+        this.price=price;
+    }
+    public int getprice(){
+        return price;
+    }
+}
+class Demo{
+    public static void main(String[]args){
+        Book b1=new Book();
+        Book b2=new Book();
+        b1.setauthorName("Robert C. Martin");
+        b1.settitle("Clean Code");
+        b1.setprice(2000);
+        System.out.println("AuthorName:"+b1.getauthorName());
+        System.out.println("Title:"+b1.gettitle());
+        System.out.println("Price:"+b1.getprice());
+        
+        b2.setauthorName("Joshua Bloch");
+        b2.settitle("Effective Java");
+        b2.setprice(5000);
+        System.out.println("AuthorName:"+b2.getauthorName());
+        System.out.println("Title:"+b2.gettitle());
+        System.out.println("Price:"+b2.getprice());
+        
+    }
+}
+
+
+OUTPUT:
+AuthorName:Robert C. Martin
+Title:Clean Code
+Price:2000
+AuthorName:Joshua Bloch
+Title:Effective Java
+Price:5000
