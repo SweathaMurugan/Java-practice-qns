@@ -1,0 +1,50 @@
+//printing the brand name of laptop and mobile also override the switchon method from Device
+
+class Demo{
+    public static void main(String[]args){
+        Laptop l = new Laptop();
+        l.setbrandname("Lenovo");
+        l.switchon();
+        System.out.println("Laptopbrand:"+l.getbrandname());
+        Mobile m = new Mobile();
+        m.setbrandname("Realme");
+        m.switchon();
+        System.out.println("Mobilebrand:"+m.getbrandname());
+    }
+}
+
+
+class Device{
+    private String brandname;
+    
+    public void setbrandname(String brandname){
+        this.brandname=brandname;
+    }
+    public String getbrandname(){
+        return brandname;
+    }
+    public void switchon(){
+        System.out.println("Device switch on");
+        }
+}
+class Laptop extends Device{
+    @Override
+    public void switchon(){
+        System.out.println("Laptop switch on");
+    }
+}
+class Mobile extends Device{
+    @Override
+    public void switchon(){
+        System.out.println("Mobile switch on");
+    }
+}
+
+
+
+OUTPUT:
+Laptop switch on
+Laptopbrand:Lenovo
+Mobile switch on
+Mobilebrand:Realme
+
