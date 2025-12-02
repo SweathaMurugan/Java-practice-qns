@@ -1,0 +1,43 @@
+//Write a Java program to create a class called BankAccount with private instance variables accountNumber and balance. 
+//Provide public getter and setter methods to access and modify these variables
+
+
+class BankAccount{
+    private int accountNumber;
+    private int balance;
+    
+    public void setaccountNumber(int accountNumber){
+        this.accountNumber=accountNumber;
+    }
+    public int getaccountNumber(){
+        return accountNumber;
+    }
+    public void setbalance(int balance){
+        this.balance=balance;
+    }
+    public int getbalance(){
+        return balance;
+    }
+    
+}
+public class Demo{
+    public static void main(String[]args){
+        BankAccount bc=new BankAccount();
+        bc.setaccountNumber(80848);
+        bc.setbalance(45000);
+        System.out.println("AccountNumber:"+bc.getaccountNumber());
+        System.out.println("Balance:"+bc.getbalance());
+        
+    }
+}
+
+OUTPUT:
+AccountNumber:80848
+Balance:45000
+
+
+
+
+
+
+
