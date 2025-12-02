@@ -1,0 +1,71 @@
+//Write a Java program to reverse an array of integer values.
+
+import java.util.Arrays;
+class reverse{
+    public static void main(String[] args) {
+        int[]arr1=new int[]{45,63,2,17,5};
+        for(int i=0;i<arr1.length/2;i++){
+            int temp=arr1[i];
+            arr1[i]=arr1[arr1.length-i-1];
+            arr1[arr1.length-i-1]=temp;
+        }
+        System.out.println("Reversed array:"+Arrays.toString(arr1));
+       
+    }
+}
+
+OUTPUT:
+
+Reversed array:[5, 17, 2, 63, 45]
+
+//Reversing a string
+import java.util.Arrays;
+
+public class ReverseStringArray {
+    public static void main(String[] args) {
+
+        String[] arr = {"apple", "banana", "cat", "dog"};
+
+        System.out.println("Original array: " + Arrays.toString(arr));
+
+        for (int i = 0; i < arr.length / 2; i++) {
+            String temp = arr[i];
+            arr[i] = arr[arr.length - i - 1];
+            arr[arr.length - i - 1] = temp;
+        }
+
+        System.out.println("Reversed array: " + Arrays.toString(arr));
+    }
+}
+
+OUTPUT:
+Original array: [apple, banana, cat, dog]
+Reversed array: [dog, cat, banana, apple]
+
+
+//Reversing a char array
+
+import java.util.Arrays;
+
+public class ReverseCharArray {
+    public static void main(String[] args) {
+
+        char[] arr = {'a', 'b', 'c', 'd'};
+
+        System.out.println("Original array: " + Arrays.toString(arr));
+
+        for (int i = 0; i < arr.length / 2; i++) {
+            char temp = arr[i];
+            arr[i] = arr[arr.length - i - 1];
+            arr[arr.length - i - 1] = temp;
+        }
+
+        System.out.println("Reversed array: " + Arrays.toString(arr));
+    }
+}
+
+OUTPUT:
+Original array: [a, b, c, d]
+Reversed array: [d, c, b, a]
+
+
