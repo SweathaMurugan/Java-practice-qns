@@ -1,0 +1,30 @@
+Write a Java program to create a class called Shape with a method called getArea().
+Create a subclass called Rectangle that overrides the getArea() method to calculate the area of a rectangle
+
+class Shape{
+    public double getArea(){
+        return 0.0;
+    }
+}
+class Rectangle extends Shape{
+    double length;
+    double breadth;
+    public Rectangle(double length,double breadth){
+        this.length=length;
+        this.breadth=breadth;
+    }
+    @Override
+    public double getArea(){
+        return length*breadth;
+    }
+}
+class Demo{
+    public static void main(String[]args){
+       Rectangle r = new Rectangle(4,9);
+       System.out.println(r.getArea());
+        
+    }
+}
+
+OUTPUT:
+36.0
