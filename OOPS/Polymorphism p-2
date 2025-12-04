@@ -1,0 +1,60 @@
+Write a Java program to create a class Vehicle with a method called speedUp(). 
+Create two subclasses  Car and  Bicycle. Override the speedUp() method in each subclass to increase the vehicle's speed differently
+
+class Shape{
+    public double calculateArea(){
+        return 0.0;
+    }
+}
+class Circle extends Shape{
+    double radius;
+    public Circle(double radius){
+        this.radius=radius;
+    }
+    @Override
+    public double calculateArea(){
+        return 3.14*radius*radius;
+    }
+}
+class Rectangle extends Shape {
+    double length;
+    double breadth;
+    public Rectangle(double length,double breadth){
+        this.length=length;
+        this.breadth=breadth;
+    }
+    @Override
+    public double calculateArea(){
+        return length*breadth;
+    }
+}
+class Triangle extends Shape {
+    double base;
+    double height;
+    public Triangle(double base,double height){
+        this.base=base;
+        this.height=height;
+    }
+    @Override
+    public double calculateArea(){
+        return 0.5*base*height;
+    }
+}
+class Demo {
+    public static void main(String[] args) {
+       Shape s1=new Circle(5);
+       System.out.println("Circlearea:"+s1.calculateArea());
+       Shape s2=new Rectangle(4,6);
+       System.out.println("Rectanglearea:"+s2.calculateArea());
+       Shape s3=new Triangle(16,8);
+       System.out.println("Trianglearea:"+s3.calculateArea());
+    }
+}
+
+
+OUTPUT:
+Circlearea:78.5
+Rectanglearea:24.0
+Trianglearea:64.0
+
+
