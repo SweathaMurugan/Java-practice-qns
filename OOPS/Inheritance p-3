@@ -1,0 +1,52 @@
+ Write a Java program to create a class known as "BankAccount" with methods called deposit() and withdraw(). 
+Create a subclass called SavingsAccount that overrides the withdraw() method to prevent withdrawals if the account balance falls below one hundred.
+
+
+class BankAccount{
+    protected double balance;
+    public void deposit(double amount){
+        balance += amount;
+        System.out.println("Deposited amount:"+amount);
+    }
+    public void withdraw(double amount){
+        balance -= amount;
+        System.out.println("Withdraw amount:"+amount);
+    }
+    public double getbalance(){
+        return balance;
+    }
+}
+class SavingsAccount extends BankAccount{
+    @Override
+    public void withdraw(double amount){
+        if(balance-amount<100){
+            System.out.println("Insufficient balance");
+        }
+        else{
+            balance-=amount;
+            System.out.println("Withdrawal amount:"+amount);
+        }
+    }
+    
+}
+class Demo {
+    public static void main(String[] args){
+        SavingsAccount sa= new SavingsAccount();
+        sa.deposit(900);
+        System.out.println("Current Balance:"+sa.getbalance());
+        sa.withdraw(850);  
+        System.out.println("Current Balance: " + sa.getbalance());
+        sa.withdraw(200);
+        System.out.println("Current Balance: " + sa.getbalance());
+        
+    }
+}
+
+OUTPUT:
+Deposited amount:900.0
+Current Balance:900.0
+Insufficient balance
+Current Balance: 900.0
+Withdrawal amount:200.0
+Current Balance: 700.0
+
