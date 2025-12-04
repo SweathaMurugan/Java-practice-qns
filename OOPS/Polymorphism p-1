@@ -1,0 +1,38 @@
+Write a Java program to create a base class Animal (Animal Family) with a method called Sound().
+Create two subclasses Bird and Cat. Override the Sound() method in each subclass to make a specific sound for each animal.
+
+
+
+ 
+ class Animal{
+     public void Sound(){
+         System.out.println("Animal sounds");
+     }
+ }
+ class Bird extends Animal{
+     @Override
+     public void Sound(){
+         System.out.println("Bird sounds");
+     }
+ }
+ class Cat extends Animal{
+     @Override
+     public void Sound(){
+         System.out.println("Cat sounds");
+     }
+ }
+class Demo{
+     public static void main(String[]args){
+         Animal a = new Animal();
+         a.Sound();
+         Bird b=new Bird();
+         b.Sound();
+         Cat c=new Cat();
+         c.Sound();
+     }
+ }
+
+OUTPUT:
+Animal sounds
+Bird sounds
+Cat sounds
