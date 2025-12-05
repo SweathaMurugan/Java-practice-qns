@@ -1,0 +1,50 @@
+
+package Javaproblems;
+import java.util.Scanner;
+
+public class frequencyofmixedchars {
+    public static void main(String[]args){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the mixed string:");
+        String s=scan.next();
+        int num=0;
+        int lcase=0;
+        int ucase=0;
+        int special=0;
+
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(ch>='a'&ch<='z'){
+                lcase++;
+            }
+            else if(ch>='A'&ch<='Z'){
+                ucase++;
+            }
+            else if(ch>='0'&ch<='9'){
+                num++;
+            }
+            else{
+                special++;
+            }
+
+
+        }
+        System.out.println("Lowercase:"+lcase);
+        System.out.println("Uppercase:"+ucase);
+        System.out.println("Numbers:"+num);
+        System.out.println("Specialcharacter:"+special);
+
+    }
+
+
+}
+
+OUTPUT:
+Enter the mixed string:
+Swea@2393ST
+Lowercase:3
+Uppercase:3
+Numbers:4
+Specialcharacter:1
+
+
